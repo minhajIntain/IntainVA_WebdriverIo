@@ -2,9 +2,9 @@ name: WebdriverIO CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [master]
   pull_request:
-    branches: [ main ]
+    branches: [master]
 
 jobs:
   test:
@@ -12,36 +12,43 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.20.4] 
+        node-version: [18.20.4]
 
     steps:
+    # Step 1: Check out repository code
     - name: Check out repository
-      uses: actions/checkout@v3  # Check out the repository code
+      uses: actions/checkout@v3
 
-    - name: Set up Node.js ${{ matrix.node-version }}
+    # Step 2: Set up Node.js with caching
+    - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'  # Cache npm dependencies
+        cache: npm
 
-    - name: Verify Node.js and npm versions
+    # Step 3: Verify Node.js and npm versions
+    - name: Verify Node and npm versions
       run: |
-        node -v  # Verify Node version is v18.20.4
-        npm -v   # Verify npm version is 10.x
+        node -v
+        npm -v
 
-    - name: Install Dependencies
-      run: npm install  
+    # Step 4: Install dependencies
+    - name: Install dependencies
+      run: npm install
 
-    - name: Run WebdriverIO Tests
-      run: npm run wdio 
+    # Step 5: Run WebdriverIO tests
+    - name: Run WebdriverIO tests
+      run: npm run wdio
 
-    - name: Upload Logs (Optional)
+    # Step 6: Upload logs if tests fail
+    - name: Upload logs on failure
       if: failure()
       uses: actions/upload-artifact@v3
       with:
         name: allure-report
         path: ./allure-report
 
-    - name: Report Success
+    # Step 7: Report success if all tests pass
+    - name: Report success
       if: success()
       run: echo "All tests passed successfully!"
