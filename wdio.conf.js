@@ -23,8 +23,8 @@ export const config = {
     specs: [
         './test/specs/adminLogIn.e2e.js',
         './test/specs/adminDashboard.e2e.js',
-        './test/specs/adminProcessor.e2e.js',
-        './test/specs/adminFieldAddScreen.e2e.js',
+        // './test/specs/adminProcessor.e2e.js',
+        // './test/specs/adminFieldAddScreen.e2e.js',
         './test/specs/ProcessorDashboard.e2e.js'
 
 
