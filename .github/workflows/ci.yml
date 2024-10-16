@@ -1,0 +1,47 @@
+name: WebdriverIO CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.20.4] 
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3  # Check out the repository code
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'  # Cache npm dependencies
+
+    - name: Verify Node.js and npm versions
+      run: |
+        node -v  # Verify Node version is v18.20.4
+        npm -v   # Verify npm version is 10.x
+
+    - name: Install Dependencies
+      run: npm install  
+
+    - name: Run WebdriverIO Tests
+      run: npm run wdio 
+
+    - name: Upload Logs (Optional)
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report
+        path: ./allure-report
+
+    - name: Report Success
+      if: success()
+      run: echo "All tests passed successfully!"
