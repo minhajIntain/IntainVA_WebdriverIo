@@ -56,6 +56,9 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+    user: process.env.INTAINVA_BROWSERSTACK,
+  key: process.env.INTAINVA_BROWSERSTACK_KEY,
+  services: ['browserstack'],
     capabilities: [{
         browserName: 'chrome',
     }],
