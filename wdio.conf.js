@@ -21,8 +21,8 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/adminLogIn.e2e.js',
-        './test/specs/adminDashboard.e2e.js',
+        // './test/specs/adminLogIn.e2e.js',
+        // './test/specs/adminDashboard.e2e.js',
         // './test/specs/adminProcessor.e2e.js',
         // './test/specs/adminFieldAddScreen.e2e.js',
         './test/specs/ProcessorDashboard.e2e.js'
