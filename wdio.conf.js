@@ -55,13 +55,20 @@ export const config = {
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
-    //
-    user: process.env.INTAINVA_BROWSERSTACK,
-  key: process.env.INTAINVA_BROWSERSTACK_KEY,
-  services: ['browserstack'],
+  
     capabilities: [{
-        browserName: 'chrome',
-    }],
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+          args: [
+              '--headless',             // Run in headless mode
+              '--disable-gpu',           // Disable GPU acceleration
+              '--no-sandbox',            // Bypass OS security model
+              '--disable-dev-shm-usage', // Disable shared memory usage
+              '--window-size=1920,1080'  // Set window size to ensure consistency
+          ]
+      }
+  }],
+  
 
     //
     // ===================
