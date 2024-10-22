@@ -155,11 +155,23 @@ export const config = {
         timeout: 60000
     },
 
-    reporters: [['allure', {
-      outputDir: 'allure-results',
-      // disableWebdriverStepsReporting: true,
-      disableWebdriverScreenshotsReporting: false,
-  }]],
+    reporters: [
+      
+  //     ['allure', {
+  //     outputDir: 'allure-results',
+  //     // disableWebdriverStepsReporting: true,
+  //     disableWebdriverScreenshotsReporting: false,
+
+      
+  // }]
+
+  ['junit', {
+    outputDir: './junit-results',  // Directory where JUnit XML files will be saved
+    outputFileFormat: function (options) { // Optional: Custom file name format
+        return `results-${options.cid}.xml`;
+    }
+}]
+],
 
     //
     // =====

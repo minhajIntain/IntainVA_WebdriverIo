@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="1" errors="0" skipped="0">
+  <testsuite name="IntainVA Processor Dashboard" timestamp="2024-10-22T12:33:04" time="21.048" tests="1" failures="1" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="IntainVA Processor Dashboard"/>
+      <property name="capabilities" value="chrome-headless-shell.126_0_6478_126.linux"/>
+      <property name="file" value="file://./test/specs/ProcessorDashboard.e2e.js"/>
+    </properties>
+    <testcase classname="chrome-headless-shell.126_0_6478_126.linux.IntainVA_Processor_Dashboard" name="login page" time="21.044">
+      <failure message="waitUntil condition failed with the following reason: WebDriver Bidi command &quot;script.callFunction&quot; failed with error: invalid argument - Invalid input in &quot;arguments&quot;/0."/>
+      <system-out><![CDATA[
+COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/window - {}
+RESULT: {}
+COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/title - {}
+RESULT: {}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.6/clear - {}
+RESULT: {}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.6/value - {"text":"srihari.sardena@intainft.com"}
+RESULT: {"text":"srihari.sardena@intainft.com"}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.11/clear - {}
+RESULT: {}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.11/value - {"text":"IntainAVB"}
+RESULT: {"text":"IntainAVB"}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.13/click - {}
+RESULT: {}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.15/click - {}
+RESULT: {}
+COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.17/click - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/window - {}
+RESULT: {}
+COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/4725bdeb3344ec1b8c2b9e9bac0c1567 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: waitUntil condition failed with the following reason: WebDriver Bidi command "script.callFunction" failed with error: invalid argument - Invalid input in "arguments"/0.
+    at async Context.<anonymous> (file:///home/minhaj/Documents/webdriverio/test/specs/ProcessorDashboard.e2e.js:26:7)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>

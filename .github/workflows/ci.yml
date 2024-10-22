@@ -4,44 +4,57 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    # Step 1: Check out the repository code
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+    # Step 3: Install dependencies
+    - name: Install Dependencies
+      run: npm install
 
-      # Run your WebdriverIO tests
-      - name: Run WebdriverIO Tests
-        run: npm run wdio
+    # Step 4: Run WebdriverIO Tests (JUnit and Allure reports will be generated)
+    - name: Run WebdriverIO Tests
+      run: npm run wdio
 
-      # Install Allure command-line tool
-      - name: Install Allure Command-line
-        run: npm install allure-commandline --save-dev
+    # Step 5: Install Allure Command-line tool
+    - name: Install Allure Command-line
+      run: npm install -g allure-commandline --save-dev
 
-      # Ensure allure-results directory exists
-      - name: Ensure Allure Results Directory
-        run: mkdir -p ./allure-results
+    # Step 6: Ensure Results Directories Exist
+    - name: Ensure Results Directories
+      run: |
+        mkdir -p ./allure-results
+        mkdir -p ./junit-results
 
-      # Generate Allure report
-      - name: Generate Allure Report
-        run: npx allure generate ./allure-results --clean -o ./allure-report
+    # Step 7: Generate Allure Report
+    - name: Generate Allure Report
+      run: npx allure generate ./allure-results --clean -o ./allure-report
 
-      # Upload the Allure results (raw data) as an artifact
-      - name: Upload Allure Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: ./allure-results
+    # Step 8: Upload Allure Results (Raw Data) as Artifact
+    - name: Upload Allure Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-results
+        path: ./allure-results/
 
-      # Upload the generated Allure report as an artifact
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: ./allure-report/*
+    # Step 9: Upload Allure Report as Artifact
+    - name: Upload Allure Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: ./allure-report/
+
+    # Step 10: Upload JUnit Results as Artifact
+    - name: Upload JUnit Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: junit-results
+        path: ./junit-results/
