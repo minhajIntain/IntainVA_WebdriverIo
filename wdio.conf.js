@@ -21,11 +21,11 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        // './test/specs/adminLogIn.e2e.js',
-        // './test/specs/adminDashboard.e2e.js',
-        // './test/specs/adminProcessor.e2e.js',
-        // './test/specs/adminFieldAddScreen.e2e.js',
-        './test/specs/ProcessorDashboard.e2e.js'
+        './test/specs/adminLogIn.e2e.js',
+        './test/specs/adminDashboard.e2e.js',
+        './test/specs/adminProcessor.e2e.js',
+        './test/specs/adminFieldAddScreen.e2e.js',
+        // './test/specs/ProcessorDashboard.e2e.js'
 
 
     ],
@@ -58,15 +58,15 @@ export const config = {
   
     capabilities: [{
       browserName: 'chrome',
-      'goog:chromeOptions': {
-          args: [
-              '--headless',             // Run in headless mode
-              '--disable-gpu',           // Disable GPU acceleration
-              '--no-sandbox',            // Bypass OS security model
-              '--disable-dev-shm-usage', // Disable shared memory usage
-              '--window-size=1920,1080'  // Set window size to ensure consistency
-          ]
-      }
+      // 'goog:chromeOptions': {
+      //     args: [
+      //         '--headless',             // Run in headless mode
+      //         '--disable-gpu',           // Disable GPU acceleration
+      //         '--no-sandbox',            // Bypass OS security model
+      //         '--disable-dev-shm-usage', // Disable shared memory usage
+      //         '--window-size=1920,1080'  // Set window size to ensure consistency
+      //     ]
+      // }
   }],
   
 

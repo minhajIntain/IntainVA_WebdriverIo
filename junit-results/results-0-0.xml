@@ -1,45 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="1" failures="1" errors="0" skipped="0">
-  <testsuite name="IntainVA Processor Dashboard" timestamp="2024-10-22T12:33:04" time="21.048" tests="1" failures="1" errors="0" skipped="0">
+<testsuites tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="IntainVA Automation logIn Page" timestamp="2024-10-23T10:54:15" time="29.705" tests="1" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="suiteName" value="IntainVA Processor Dashboard"/>
-      <property name="capabilities" value="chrome-headless-shell.126_0_6478_126.linux"/>
-      <property name="file" value="file://./test/specs/ProcessorDashboard.e2e.js"/>
+      <property name="suiteName" value="IntainVA Automation logIn Page"/>
+      <property name="capabilities" value="chrome.126_0_6478_126.linux"/>
+      <property name="file" value="file://./test/specs/adminLogIn.e2e.js"/>
     </properties>
-    <testcase classname="chrome-headless-shell.126_0_6478_126.linux.IntainVA_Processor_Dashboard" name="login page" time="21.044">
-      <failure message="waitUntil condition failed with the following reason: WebDriver Bidi command &quot;script.callFunction&quot; failed with error: invalid argument - Invalid input in &quot;arguments&quot;/0."/>
+    <testcase classname="chrome.126_0_6478_126.linux.IntainVA_Automation_logIn_Page" name="should display an error for incorrect arguments all fields and login with correct credentials" time="29.703">
       <system-out><![CDATA[
-COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/window - {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/window - {}
 RESULT: {}
-COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/title - {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/title - {}
 RESULT: {}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.6/clear - {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.3/clear - {}
 RESULT: {}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.6/value - {"text":"srihari.sardena@intainft.com"}
-RESULT: {"text":"srihari.sardena@intainft.com"}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.11/clear - {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.3/value - {"text":"wrongemail@intainft.com"}
+RESULT: {"text":"wrongemail@intainft.com"}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.5/clear - {}
 RESULT: {}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.11/value - {"text":"IntainAVB"}
-RESULT: {"text":"IntainAVB"}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.13/click - {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.5/value - {"text":"wrongPassword"}
+RESULT: {"text":"wrongPassword"}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.13/click - {}
 RESULT: {}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.15/click - {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.14/click - {}
 RESULT: {}
-COMMAND: POST /session/4725bdeb3344ec1b8c2b9e9bac0c1567/element/f.789083E55A6369906860710080FDB29C.d.F96D7A6E91B22C43BFE87BA033C736A4.e.17/click - {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.78EEC3F96D5802A1FA57E506B469AB81.e.10/click - {}
 RESULT: {}
 RESULT: undefined
-COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/window - {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/refresh - {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/window - {}
 RESULT: {}
-COMMAND: GET /session/4725bdeb3344ec1b8c2b9e9bac0c1567/screenshot - {}
 RESULT: {}
-COMMAND: DELETE /session/4725bdeb3344ec1b8c2b9e9bac0c1567 - {}
+RESULT: undefined
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/url - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/title - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.29/text - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.30/text - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.31/text - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.32/text - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.33/text - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.34/text - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.23/selected - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.23/click - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.46/click - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.47/click - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.44/text - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.43/click - {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/window - {}
+RESULT: {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B46C797CAEEE6A0CBA831F05A3582FAB.e.52/click - {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/window - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/refresh - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/window - {}
+RESULT: {}
+RESULT: {}
+RESULT: undefined
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.74/clear - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.74/value - {"text":"srihari.sardena@intainft.com"}
+RESULT: {"text":"srihari.sardena@intainft.com"}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.75/clear - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.75/value - {"text":"IntainAVB"}
+RESULT: {"text":"IntainAVB"}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.86/click - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.87/click - {}
+RESULT: {}
+COMMAND: POST /session/2529f6b73c5a0220af09a498534136a0/element/f.8005971B70463A8F60BD7DFAFD465033.d.B1F39524811F379B349EDA15146FCE92.e.80/click - {}
+RESULT: {}
+COMMAND: GET /session/2529f6b73c5a0220af09a498534136a0/window - {}
+RESULT: {}
+RESULT: undefined
+COMMAND: DELETE /session/2529f6b73c5a0220af09a498534136a0 - {}
 RESULT: {}
 ]]></system-out>
-      <system-err><![CDATA[
-Error: waitUntil condition failed with the following reason: WebDriver Bidi command "script.callFunction" failed with error: invalid argument - Invalid input in "arguments"/0.
-    at async Context.<anonymous> (file:///home/minhaj/Documents/webdriverio/test/specs/ProcessorDashboard.e2e.js:26:7)
-]]></system-err>
     </testcase>
   </testsuite>
 </testsuites>
